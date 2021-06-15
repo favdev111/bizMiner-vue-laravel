@@ -1,0 +1,46 @@
+.welcome-text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: left;
+  }
+}
+
+.welcome-card-container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome-card-wrap {
+  padding-bottom: 15px;
+
+  > .md-card-header > .title {
+    margin-top: 43px !important;
+  }
+}
+
+.welcome-card {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 150px;
+
+  .card-title {
+    text-align: center;
+  }
+
+  .card-icon-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .stats {
+    color: #979797 !important;
+    text-align: left;
+  }
+}

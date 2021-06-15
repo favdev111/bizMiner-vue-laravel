@@ -1,0 +1,58 @@
+.new-profiles {
+  .md-card-profile {
+    .category {
+      padding: 10px;
+
+      &.new-profile-card-title {
+        padding: 5px !important;
+        font-size: 0.9rem !important;
+        display: block;
+      }
+    }
+    .new-profile-image-container {
+      max-height: 180px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-toolbar {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+
+        .toolbar-left {
+          padding: 15px;
+
+          * {
+            text-align: left;
+          }
+        }
+        .toolbar-right {
+          padding: 15px;
+
+          * {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .md-card-actions {
+      display: none;
+    }
+    .md-card-content {
+      padding-top: 0px;
+
+      .info-wrap {
+        min-height: 170px;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.vue-popover {
+  transition-property: none !important;
+  opacity: 1;
+  -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.2s; /* Firefox < 16 */
+  -ms-animation: fadein 0.2s; /* Internet Explorer */
+  -o-animation: fadein 0.2s; /* Opera < 12.1 */
+  animation: fadein 0.2s;
+}
+
+.vue-popover.dropdown-position-right {
+  margin-left: -7px;
+}
+
+.popover-menu {
+  list-style: none;
+  padding-left: 0px;
+
+  a {
+    margin: 0px !important;
+    padding: 0px 10px;
+  }
+
+  .popover-item-text {
+    line-height: 30px;
+  }
+}
+
+.sidebar.app-sidebar .sidebar-wrapper ul.popover-menu li a > i {
+  color: $text-color !important;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

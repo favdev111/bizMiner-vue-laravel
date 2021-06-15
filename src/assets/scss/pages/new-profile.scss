@@ -1,0 +1,38 @@
+.new-profile {
+  .md-toolbar-section-start {
+    display: block;
+
+    .profile-title {
+      font-size: 24px;
+    }
+  }
+  .navbar {
+    margin-bottom: 20px;
+  }
+  .toolbar-card {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    .toolbar-card-title {
+      padding: 15px 20px;
+      padding-bottom: 0px;
+      text-align: left;
+    }
+    .md-card-content {
+      .info-wrap {
+        color: $brand-info;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+    }
+    .md-card-actions {
+      display: none;
+    }
+  }
+  .access-button {
+    margin-top: 20px;
+  }
+  .profile-steps {
+    margin-bottom: 20px;
+  }
+}

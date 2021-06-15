@@ -1,0 +1,36 @@
+.if-profile {
+  .navbar {
+    margin-bottom: 0px;
+  }
+  .header {
+    .profile-title {
+      // font-size: 24px;
+      margin-top: 10px;
+    }
+  }
+  .toolbar-card {
+    .toolbar-card-title {
+      padding: 15px 20px;
+      padding-bottom: 0px;
+      text-align: left;
+    }
+    .md-card-content {
+      .info-wrap {
+        color: $brand-info;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+    }
+    .md-card-actions {
+      display: none;
+    }
+  }
+  .access-button {
+    margin-top: 50px;
+  }
+}
+
+.text-card .md-card-actions,
+.multiples-text-card .md-card-actions {
+  display: none;
+}

@@ -1,0 +1,27 @@
+.md-card-profile {
+  @extend %common-card-testimonial;
+}
+
+.md-card-profile {
+  .title {
+    color: $black-color;
+  }
+  .md-card-header:not([class*='card-header-']) {
+    background: transparent;
+  }
+  .md-card-avatar {
+    max-width: 130px;
+    max-height: 130px;
+  }
+  .md-button {
+    margin: 5px 1px;
+  }
+  .card-icon {
+    text-align: center;
+  }
+}
+
+.new-profiles .md-card-profile .md-card-header {
+  margin-left: 0px;
+  margin-right: 0px;
+}

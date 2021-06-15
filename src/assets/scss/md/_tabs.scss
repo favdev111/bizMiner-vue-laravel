@@ -1,0 +1,235 @@
+.md-tabs-navigation {
+  @include shadow-navbar-color($white-color);
+  margin: -35px 0 0;
+  border-radius: $border-radius-base;
+  padding: $padding-base $padding-base $padding-base 75px;
+  background-color: $gray-color;
+
+  .md-icon-label .md-button-content {
+    flex-direction: row;
+  }
+
+  & + .md-tabs-content {
+    &.md-theme-default {
+      height: fit-content !important;
+    }
+    .md-checkbox.md-checked .md-checkbox-container:after {
+      top: 0px;
+      left: 5px;
+    }
+  }
+
+  .md-button,
+  .md-button:hover,
+  .md-button:focus,
+  .md-button:active {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  .md-active,
+  .md-active:hover,
+  .md-active:focus {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none;
+
+    .md-button-content,
+    .md-icon {
+      color: $brand-info !important;
+    }
+  }
+
+  .md-icon-label {
+    height: auto;
+    border-radius: 3px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    .md-tab-icon + .md-tab-label {
+      margin-top: 1px;
+      margin-left: 5px;
+    }
+
+    .md-ripple {
+      padding: 10px 15px !important;
+    }
+  }
+}
+
+.favorite-list {
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+
+  li.favorite-list-item {
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .list-item-head {
+      display: flex;
+      justify-content: space-between;
+
+      .add-item {
+        color: $brand-info;
+        font-size: 22px !important;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .delete-item {
+        color: $brand-danger;
+        font-size: 18px !important;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .list-item-body {
+      color: #b2b2b2;
+      font-size: 12px;
+    }
+  }
+}
+
+.md-card-profile.search-sidebar {
+  .md-card-content {
+    padding-bottom: 0px;
+  }
+}
+
+.md-card-profile.map-sidebar {
+  .sidebar-title {
+    margin-bottom: 0px;
+  }
+  .info-wrap {
+    margin-bottom: 15px;
+  }
+  .md-card-actions {
+    border-top: none;
+  }
+}
+
+.favorites-icon {
+  color: $brand-info !important;
+}
+
+ul.tad-data-list {
+  padding-left: 0px;
+  list-style: none;
+
+  li.list-item {
+    padding-top: 5px;
+  }
+}
+
+div#tab-related-products {
+  h4 {
+    margin-bottom: 10px;
+  }
+  ul.related-product-list {
+    list-style: none;
+    padding-left: 0px;
+
+    .checkbox-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+
+      .md-checkbox {
+        margin-right: 0px;
+      }
+    }
+
+    li.list-item {
+      position: relative;
+
+      .locked-overlay {
+        display: none;
+      }
+
+      &.locked {
+        .locked-overlay {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 99;
+          background-color: #ffffff8c;
+        }
+      }
+
+      .md-card-profile {
+        .category {
+          float: left;
+          font-size: 16px;
+          padding-top: 15px;
+
+          .info-icon {
+            margin-top: -13px;
+            font-size: 18px !important;
+          }
+        }
+        .md-card-content {
+          .product-value {
+            font-size: 20px;
+            color: $brand-info;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 20px;
+          }
+        }
+        .md-card-actions {
+          .description {
+            color: #3c4858;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 540px) {
+  .md-tabs-navigation {
+    flex-direction: column;
+  }
+}
+
+.md-tabs-indicator {
+  display: none;
+}
+
+.md-nav-tabs-title {
+  position: absolute;
+  z-index: 9999;
+  top: 6px;
+  color: white;
+  font-size: initial;
+  margin-left: 15px;
+}
+
+.md-tab {
+  padding: 15px 0 0 0;
+}

@@ -1,0 +1,28 @@
+.md-card-avatar {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.edit-user-avatar {
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  background-color: $brand-info;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  i {
+    color: $white !important;
+    font-size: 15px !important;
+  }
+}

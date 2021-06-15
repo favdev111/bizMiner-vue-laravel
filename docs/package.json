@@ -1,0 +1,20 @@
+{
+    "name": "vue-material-dashboard-pro-docs",
+    "version": "1.4.0",
+    "private": true,
+    "scripts": {
+        "dev": "vuepress dev",
+        "build": "vuepress build && npm run copy:docs",
+        "copy:docs": "ncp .vuepress/dist ../dist/documentation",
+        "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run dev"
+    },
+    "devDependencies": {
+        "cheerio": "^1.0.0-rc.2",
+        "dotenv": "^8.2.0",
+        "markdown-it-container": "^2.0.0",
+        "ncp": "^2.0.0",
+        "vuepress": "0.14.11"
+    },
+    "author": "https://www.creative-tim.com/",
+    "description": "Vue Material Dashboard Pro"
+}

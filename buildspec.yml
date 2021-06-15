@@ -1,0 +1,41 @@
+version: 0.2
+
+env:
+  variables:
+    ECR_REPO: 316833052527.dkr.ecr.us-east-1.amazonaws.com/bizminer/ui-app
+    IMAGE_ID: bizminer/ui-app
+    IMAGE_TAG: latest
+    REGION: us-east-1
+
+phases:
+  install:
+    commands:
+      - npm i npm@latest -g
+      - pip install --upgrade pip
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - echo Pre_build Phase
+      - npm install
+  build:
+    commands:
+      - echo Build started at `date`
+      - echo "Building the Docker image..."
+      - docker build -t $IMAGE_ID . --file Dockerfile
+      - echo "Tagging Docker image for ECR.."
+      - docker tag $IMAGE_ID:$IMAGE_TAG $ECR_REPO:$IMAGE_TAG
+      - echo "Logging into ECR.."
+      - eval $(aws ecr get-login --region $REGION --no-include-email | sed 's|https://||')
+      - echo Pushing the Docker image as $ECR_REPO:$IMAGE_TAG
+      - docker image ls -a
+      - docker push $ECR_REPO:$IMAGE_TAG
+      - echo Build completed on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Writing image definitions file..
+      - printf '[{"name":"api-app","imageUri":"%s"}]' $ECR_REPO:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: 
+      - taskdef.json
+      - appspec.yml

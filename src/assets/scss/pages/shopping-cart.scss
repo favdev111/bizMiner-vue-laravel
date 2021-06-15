@@ -1,0 +1,35 @@
+.shopping-cart {
+  .td-price {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 22px;
+    padding-right: 15px;
+
+    .total-label {
+      margin-right: 25px;
+    }
+  }
+  .item-category {
+    color: #3c4858 !important;
+    white-space: pre-wrap;
+  }
+  .md-table-head-container {
+    text-align: right;
+  }
+  .md-table-head:nth-child(2) {
+    .md-table-head-container {
+      text-align: left;
+    }
+  }
+  .save-for-later {
+    max-width: 400px;
+    width: 100%;
+  }
+  .save-for-later-icon {
+    &:hover {
+      cursor: pointer;
+      color: $brand-info;
+    }
+  }
+}

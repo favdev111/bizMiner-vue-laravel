@@ -1,0 +1,201 @@
+@import '../../src/assets/scss/md/_variables';
+
+.theme-container .page {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.content {
+  padding-top: 4rem !important;
+  max-width: none !important;
+}
+
+.theme-container .sidebar {
+  background-color: $white-color;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  left: 0;
+  right: auto;
+}
+
+.theme-container .badge {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 5px 12px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.md-select-menu .md-list {
+  width: 100%;
+}
+
+.md-card .md-card-header h4 {
+  color: $white-color;
+}
+
+.sidebar .nav-links .repo-link,
+.md-theme-default a:not(.md-button) {
+  color: inherit !important;
+}
+
+.md-theme-default a:not(.md-button) {
+  color: $brand-info;
+}
+
+@media screen and (max-width: 720px) {
+  .theme-container .sidebar {
+    transition: transform 0.2s ease !important;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+
+  .theme-container.sidebar-open .sidebar {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+      0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+h1 {
+  font-size: 3rem !important;
+  border-bottom: 1px solid #eaecef;
+}
+
+h2 {
+  border: 0;
+}
+
+p {
+  font-size: 15px;
+}
+
+.links .nav-links a {
+  .icon.outbound,
+  & {
+    color: $white-color !important;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: $brand-success;
+  box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28),
+    0 4px 20px 0 rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+  border: 0;
+  height: 70px;
+
+  .links {
+    top: unset;
+    background-color: transparent;
+
+    .search-box {
+      .suggestions li a {
+        color: $black-color;
+
+        &:hover,
+        &:focus {
+          color: $brand-success !important;
+        }
+      }
+    }
+  }
+
+  .sidebar-button {
+    top: 0.9rem;
+
+    svg path {
+      fill: $white-color;
+    }
+  }
+
+  .site-name {
+    font-size: 1.125rem;
+    color: $white-color;
+    font-weight: 300;
+  }
+}
+
+.sidebar {
+  a.sidebar-link {
+    color: $black-color !important;
+
+    &:hover,
+    &:focus {
+      color: $brand-success !important;
+    }
+
+    &.active {
+      color: $brand-success !important;
+    }
+  }
+}
+
+.page .page-nav {
+  .next a,
+  .next a:hover,
+  .next a:focus,
+  .prev a,
+  .prev a:hover,
+  .prev a:focus {
+    color: $brand-success !important;
+  }
+}
+
+.md-list {
+  width: 11%;
+}
+
+.md-card {
+  th,
+  td,
+  tr {
+    border: 0;
+  }
+
+  tr:nth-child(2n) {
+    background-color: transparent;
+  }
+}
+
+#sizes + p + .demo-block .source {
+  display: flex;
+  align-items: center;
+}
+
+.md-toolbar .md-list {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.demo-block .source .md-toolbar {
+  margin-bottom: 10px;
+}
+
+.demo-block .md-card .description,
+.demo-block .modal-mask .description {
+  padding: unset;
+  border: 0;
+  font-size: inherit;
+  color: #999;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+.theme-container {
+  height: 100vh;
+  position: relative;
+}
+
+.theme-container .sidebar {
+  transition: none;
+  top: 3.6rem;
+  z-index: 10;
+
+  &:after {
+    display: none;
+  }
+}

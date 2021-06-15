@@ -1,0 +1,83 @@
+// Icons
+
+.view-profile-icon {
+  color: $brand-info !important;
+}
+
+.new-release-icon {
+  color: $brand-danger !important;
+  margin-left: 5px;
+  font-size: 20px !important;
+  width: 20px;
+  height: 20px;
+}
+
+// Inputs
+
+.search-box,
+.client-name-box {
+  input {
+    cursor: text;
+    width: 12rem;
+    color: $gray;
+    display: inline-block;
+    border: 1px solid #cfd4db;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0 2rem 0 0.5rem;
+    outline: none;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-position: calc(100% - 10px) !important;
+    background-size: 1rem;
+
+    &::placeholder {
+      color: #cfd4db;
+    }
+  }
+}
+
+.search-box {
+  input {
+    background: #fff url(/img/search.svg) 0.6rem 0.5rem no-repeat;
+  }
+}
+
+.client-name-box input {
+  margin-top: 8px;
+  margin-right: 5px;
+  margin-left: 5px;
+  // height: 41px;
+}
+
+.client-button-box button {
+  margin-left: 5px !important;
+}
+
+.datepicker-box {
+  max-width: 235px;
+  display: inline-block;
+
+  input {
+    cursor: text;
+    width: 8rem !important;
+    color: $gray;
+    display: inline-block;
+    border: 1px solid #cfd4db !important;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0 2rem 0 0.5rem;
+    outline: none;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    height: 34px !important;
+    padding: 6px !important;
+    margin-left: 5px;
+
+    &::placeholder {
+      color: #cfd4db;
+    }
+  }
+}
